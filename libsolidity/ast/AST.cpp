@@ -368,7 +368,6 @@ TypePointer FunctionDefinition::type() const
 
 string FunctionDefinition::externalSignature() const
 {
-	solAssert(!isFallback(), "Fallback function has no signature.");
 	return FunctionType(*this).externalSignature();
 }
 
