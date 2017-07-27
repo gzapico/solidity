@@ -589,6 +589,7 @@ public:
 	virtual void accept(ASTConstVisitor& _visitor) const override;
 
 	bool isConstructor() const { return m_isConstructor; }
+	bool isFallback() const { return name().empty(); }
 	bool isDeclaredConst() const { return m_isDeclaredConst; }
 	bool isPayable() const { return m_isPayable; }
 	std::vector<ASTPointer<ModifierInvocation>> const& modifiers() const { return m_functionModifiers; }
